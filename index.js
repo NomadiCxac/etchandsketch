@@ -63,7 +63,7 @@ function populateGrid () {
 
 
 function randomRGB () {
-    const x = Math.floor(Math.random() * 256);
+    const x = Math.floor(Math.random() * 256);  
     const y = Math.floor(Math.random() * 256);
     const z = Math.floor(Math.random() * 256);
     const RGBColor = `rgb(${x},${y},${z})`
@@ -71,16 +71,14 @@ function randomRGB () {
     return RGBColor;
 }
 
-gridSelection.addEventListener('click', (e) => {
-    console.log(e.target);
-    console.log(createBoard.value);
-})
-
 container.addEventListener('mouseover', (e) => {
     sketch = (e.target);
+    console.log(sketch);
 
     if (sketch.className == "square") {
-        sketch.classList.add("hover");
+        // sketch.classList.add("hover")
+        randomColour = randomRGB();
+        sketch.setAttribute("style", `background: ${randomColour}`);
     }
 
 })
