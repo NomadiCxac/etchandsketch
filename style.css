@@ -6,20 +6,27 @@
 #container {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color: white;
     height: 100vh;
     color: white;
     border: 1px solid black;
 }
 
 .grid {
-    background-color: blue;
     display: flex;
     flex: 1 1 0;
-
-}
+}   
 
 .square {
-    background-color: red;
+    border: 1px solid black ;
     flex: 1 1 0;
+}
+
+.hover { 
+    background-color: grey;
+    flex: 1 1 0;
+}   
+
+.createBoard {
+    margin-bottom: 100px;
 }
